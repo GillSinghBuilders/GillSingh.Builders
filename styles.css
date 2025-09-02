@@ -28,9 +28,9 @@ nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 600; transitio
 nav ul li a:hover { color: #e67e22; }
 
 /* HERO */
-.hero { position: relative; text-align: center; height: 400px; overflow: hidden; }
+.hero { position: relative; text-align: center; min-height: 350px; overflow: hidden; padding-top: 60px; }
 .hero-image { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6); }
-.hero-content { position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); color: #fff; }
+.hero-content { position: relative; color: #fff; padding: 60px 20px 20px 20px; z-index: 1; }
 .btn { background: #e67e22; color: #fff; padding: 12px 25px; border-radius: 8px; text-decoration: none; transition: background 0.3s; }
 .btn:hover { background: #cf6f17; }
 
@@ -54,6 +54,3 @@ h2 { color: #2c3e50; margin-bottom: 30px; border-bottom: 3px solid #e67e22; disp
 
 /* FOOTER */
 footer { background: #2c3e50; color: #fff; text-align: center; padding: 20px 0; }
-
-.contact-form input, .contact-form textarea { padding: 12px; border-radius: 8px; border: 1px solid #ccc;
-
