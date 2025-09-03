@@ -17,6 +17,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -38,7 +39,8 @@
   <section id="about" class="section">
     <div class="container">
       <h2>About Us</h2>
-      <p>Gill Singh Builders delivers world-class construction services with integrity, precision, and style. Specializing in residential and commercial projects, we focus on customer satisfaction and lasting quality.</p>
+      <p>Gill Singh Builders delivers world-class construction services with integrity, precision, and style.  
+      Specializing in residential and commercial projects, we focus on customer satisfaction and lasting quality.</p>
     </div>
   </section>
 
@@ -67,25 +69,47 @@
     </div>
   </section>
 
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Our Projects</h2>
+      <div class="grid">
+        <div class="card project-card"><img src="images/project1.jpg" alt="Residential Project"><h3>Residential Project</h3></div>
+        <div class="card project-card"><img src="images/project2.jpg" alt="Commercial Project"><h3>Commercial Project</h3></div>
+        <div class="card project-card"><img src="images/project3.jpg" alt="Renovation Project"><h3>Renovation Project</h3></div>
+        <div class="card project-card"><img src="images/project4.jpg" alt="Project Management"><h3>Project Management</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section alt">
+    <div class="container">
+      <h2>What Our Clients Say</h2>
+      <div class="grid">
+        <div class="card testimonial-card">“Professional and trustworthy.” – A. Singh</div>
+        <div class="card testimonial-card">“Exceeded expectations on our office project.” – K. Patel</div>
+        <div class="card testimonial-card">“Our dream home became a reality.” – J. Kaur</div>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section id="contact" class="section">
     <div class="container">
       <h2>Contact Us</h2>
 
-      <!-- FORMSPREE FORM -->
+      <!-- CONTACT FORM -->
       <form action="https://formspree.io/f/mldwwkvl" method="POST" class="contact-form" id="contactForm">
-        <label>
-          Your email:
-          <input type="email" name="email" required>
-        </label>
-        <label>
-          Your message:
-          <textarea name="message" required></textarea>
-        </label>
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+
         <button type="submit">Send</button>
       </form>
 
-      <!-- CONFIRMATION MESSAGE -->
       <p id="formMessage" style="color:green; display:none; text-align:center; margin-top:10px;">Message sent successfully!</p>
 
       <p>Email: <span>GillSinghBuilders@gmail.com</span> | Phone: <span>+44 7542 563412</span></p>
@@ -100,7 +124,7 @@
     </div>
   </footer>
 
-  <!-- SCRIPT TO HANDLE FORM SUBMISSION -->
+  <!-- SCRIPT FOR CONTACT FORM -->
   <script>
     const form = document.getElementById('contactForm');
     const message = document.getElementById('formMessage');
@@ -113,7 +137,6 @@
         body: data,
         headers: { 'Accept': 'application/json' }
       });
-
       if (response.ok) {
         message.style.display = 'block';
         form.reset();
