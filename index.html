@@ -18,7 +18,7 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -31,7 +31,7 @@
     <div class="hero-content">
       <h1>Building Dreams. Creating Landmarks.</h1>
       <p>Trusted construction services with elegance and quality.</p>
-      <a href="#contact" class="btn">Request a Quote</a>
+      <a href="contact.html" class="btn">Request a Quote</a>
     </div>
   </section>
 
@@ -94,29 +94,6 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact Us</h2>
-
-      <!-- CONTACT FORM -->
-      <form action="https://formspree.io/f/mldwwkvl" method="POST" class="contact-form" id="contactForm">
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required>
-
-        <label for="message">Your Message:</label>
-        <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
-
-        <button type="submit">Send</button>
-      </form>
-
-      <p id="formMessage" style="color:green; display:none; text-align:center; margin-top:10px;">Message sent successfully!</p>
-
-      <p>Email: <span>GillSinghBuilders@gmail.com</span> | Phone: <span>+44 7542 563412</span></p>
-      <p>Address: London & Nationwide</p>
-    </div>
-  </section>
-
   <!-- FOOTER -->
   <footer>
     <div class="container">
@@ -124,27 +101,10 @@
     </div>
   </footer>
 
-  <!-- SCRIPT FOR CONTACT FORM -->
-  <script>
-    const form = document.getElementById('contactForm');
-    const message = document.getElementById('formMessage');
+</body>
+</html>
 
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const data = new FormData(form);
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
-      if (response.ok) {
-        message.style.display = 'block';
-        form.reset();
-      } else {
-        alert('Oops! Something went wrong.');
-      }
-    });
-  </script>
 
 </body>
 </html>
+
